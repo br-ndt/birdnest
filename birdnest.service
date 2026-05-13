@@ -1,0 +1,18 @@
+[Unit]
+Description=Birdcam aggregator
+After=network-online.target sound.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=yourUser
+WorkingDirectory=/path/to/birdnest
+EnvironmentFile=/etc/birdnest/env
+ExecStart=/usr/bin/python3 /path/to/birdnest/birdnest.py
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

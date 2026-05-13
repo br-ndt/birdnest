@@ -1,0 +1,16 @@
+[[cams]]
+name = "feeder-front"
+host = "birdcam-front.local"
+port = 5000
+token = "..."
+
+[[cams]]
+name = "feeder-side"
+host = "birdcam-side.local"
+port = 5000
+token = "..."
+
+[server]
+proxy_mode = "direct"   # or "direct" for dev
+clip_store = "/var/lib/birdnest/clips"
+cleanup_after_offload_days = 7
