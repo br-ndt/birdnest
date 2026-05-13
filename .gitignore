@@ -23,5 +23,6 @@ captures/
 .DS_Store
 Thumbs.db
 
+birdnest.db
 birdnest.toml
 !birdnest.toml.example

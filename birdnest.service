@@ -7,7 +7,7 @@ Wants=network-online.target
 Type=simple
 User=yourUser
 WorkingDirectory=/path/to/birdnest
-EnvironmentFile=/etc/birdnest/env
+Environment=PYTHONUNBUFFERED=1
 ExecStart=/path/to/birdnest/.venv/bin/python /path/to/birdnest/birdnest.py
 Restart=on-failure
 RestartSec=5

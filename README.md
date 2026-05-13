@@ -14,7 +14,7 @@ See [birdcam README](https://github.com/br-ndt/birdcam), then
 cp birdnest.toml.example birdnest.toml
 ```
 
-and update `birdnest.toml` with correct birdcam hostnames and desired nicknames.
+and update `birdnest.toml` with correct birdcam hostnames and desired nicknames. Also ensure that each token field matches whatever you gave to the birdcam's ENV.
 
 ### Install python dependencies
 
@@ -39,10 +39,10 @@ pip install -e .
 ```bash
 # make sure your virtual environment is activated
 source .venv/bin/activate
-BIRDCAM_TOKEN=abc123 python3 birdnest.py
+python3 birdnest.py
 ```
 
-Visit `http://{hostname}:8000/api/cams` and you should see your connected birdcams in JSON. `BIRDCAM_TOKEN` should match the token given to ALL birdcams (per birdcam auth on the roadmap).
+Visit `http://{hostname}:8000/api/cams` and you should see your connected birdcams in JSON.
 
 
 ## Systemd Service
