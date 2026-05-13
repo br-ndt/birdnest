@@ -1,0 +1,13 @@
+[project]
+name = "birdnest"
+version = "0.1.0"
+description = "A birdcam aggregator service."
+requires-python = ">=3.9"
+dependencies = [
+    "flask>=3.0.0",
+    "requests>=2.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

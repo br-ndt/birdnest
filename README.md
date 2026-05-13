@@ -17,13 +17,28 @@ cp birdnest.toml.example birdnest.toml
 and update `birdnest.toml` with correct birdcam hostnames and desired nicknames.
 
 ### Install python dependencies
+
+We recommend using [uv](https://github.com/astral-sh/uv) or a standard python `venv` to manage dependencies.
+
+**Using uv:**
 ```bash
-sudo apt install -y python3-flask python3-requests
+uv venv
+source .venv/bin/activate
+uv pip install -e .
+```
+
+**Using standard venv:**
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e .
 ```
 
 ### Test manually
 
 ```bash
+# make sure your virtual environment is activated
+source .venv/bin/activate
 BIRDCAM_TOKEN=abc123 python3 birdnest.py
 ```
 
