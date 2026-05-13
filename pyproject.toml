@@ -6,6 +6,7 @@ requires-python = ">=3.9"
 dependencies = [
     "flask>=3.0.0",
     "requests>=2.0.0",
+    "tomli>=2.0.1; python_version < '3.11'",
 ]
 
 [build-system]

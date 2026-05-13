@@ -8,7 +8,11 @@ upstream to the cams with the right auth header attached.
 import logging
 import sqlite3
 import threading
-import tomllib
+try:
+    import tomllib
+except ImportError:
+    import tomli as tomllib
+
 from contextlib import contextmanager
 from datetime import datetime
 from pathlib import Path
